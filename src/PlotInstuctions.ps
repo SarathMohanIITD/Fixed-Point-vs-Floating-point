@@ -1,0 +1,5 @@
+set title "Float vs Fixed "
+set xlabel "Square Matrix Size(In log scale)"
+set ylabel "Time (in Seconds)"
+set grid
+plot "src/plotdata.dat" using (log($1)):2 with linespoints title "Time taken for Floating Point" lw 2,"src/plotdata.dat" using (log($1)):3 with linespoints title "Time taken for Fixed Point" lw 2
