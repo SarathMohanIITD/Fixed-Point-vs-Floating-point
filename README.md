@@ -5,9 +5,9 @@
 ```
 - Made a project structure with following folders
   - Include
-  - Lib
-  - Src
-  - Obj
+  - Lib  (Create an empty Lib folder)
+  - Src  
+  - Obj  (Create an empty obj folder)
 - Written a ‘make’ file
 - Implemented fixed point and floating-point matric multiplication
 - Varied the size of matrix in each iteration
