@@ -66,7 +66,7 @@ The floating number representation of a number has two parts: The first part rep
 Same procedure for Fixed point vs Floating point has been implemented in MATLAB to compare with the results that are obtained from C.
 
 #### MATLAB Code
-```
+```matlab
 n=2;i=1;
 format long; %To generate more precise random numbers
 while(n<=1000)
