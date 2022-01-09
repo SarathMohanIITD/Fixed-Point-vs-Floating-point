@@ -70,29 +70,35 @@ Same procedure for Fixed point vs Floating point has been implemented in MATLAB 
 n=2;i=1;
 format long; %To generate more precise random numbers
 while(n<=1000)
-%Random matrix initialization
-a=100.*randn(n,n); %random numbers from normal dxn
-b=100.*randn(n,n);
-%Foloating point multiplication
-tic %Start timer
-c=a*b;
-t1(i)=toc; %Stop Timer2 of iteration i
-a=round(a,2); %Fixing a decimal place
-b=round(b,2);
-%Fixed point multiplication
-tic %Start timer2
-c=a*b;
-t2(i)=toc; %Stop Timer2 of iteration i
-arsz(i)=n; %Storing each n value
-if n==2, n=0; end
-n=n+50;
-i=i+1;
+  %Random matrix initialization
+  a=100.*randn(n,n); %random numbers from normal dxn
+  b=100.*randn(n,n);
+  
+  %Foloating point multiplication
+  tic %Start timer
+  c=a*b;
+  t1(i)=toc; %Stop Timer2 of iteration i
+  a=round(a,2); %Fixing a decimal place
+  b=round(b,2);
+  
+  %Fixed point multiplication
+  tic %Start timer2
+  c=a*b;
+  t2(i)=toc; %Stop Timer2 of iteration i
+  arsz(i)=n; %Storing each n value
+  if n==2, 
+    n=0; 
+  end
+  n=n+50;
+  i=i+1;
 end
+
 %Writing data to a file
 A=[arsz;t1;t2];
 fileID = fopen('data.txt','w+');
 fprintf(fileID,'%d\t%f\t%f\n',A);
 fclose(fileID);
+
 %plot
 arsz=log(arsz);
 figure
