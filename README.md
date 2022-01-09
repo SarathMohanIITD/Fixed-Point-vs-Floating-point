@@ -86,7 +86,7 @@ while(n<=1000)
   c=a*b;
   t2(i)=toc; %Stop Timer2 of iteration i
   arsz(i)=n; %Storing each n value
-  if n==2, 
+  if n==2 
     n=0; 
   end
   n=n+50;
